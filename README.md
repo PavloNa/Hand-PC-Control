@@ -8,6 +8,7 @@ This project serves the purpose of utlising AI to recognise hand gestures and in
 - Open camera
 - Detect hand landmarks
 - Move mouse in accordance to index finger-tip
+- Normalisation window to make movement easier to corners dependent on distance
 ## To Do:
 
 - Calculate gestures using euclidean distance

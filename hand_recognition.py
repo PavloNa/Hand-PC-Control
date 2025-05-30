@@ -20,6 +20,8 @@ assert cap.isOpened()
 def gestures(lm_dict):
     while True:
         if len(lm_dict) == 21:
+            mouse_coordiantes = (int(lm_dict[8][0] * screen_width), int(lm_dict[8][1] * screen_height))
+            autopy.mouse.move(mouse_coordiantes[0], mouse_coordiantes[1])
             palm = lm_dict[0]
             tips_to_palm = math.dist(lm_dict[4], palm) + math.dist(lm_dict[8], palm) + math.dist(lm_dict[12], palm) + math.dist(lm_dict[16], palm) + math.dist(lm_dict[20], palm)
             print("Distance ", tips_to_palm)
