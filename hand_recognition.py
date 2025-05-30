@@ -12,9 +12,8 @@ assert cap.isOpened()
 
 while cap.isOpened():
     ret, frame = cap.read()
-    
+    frame = cv2.flip(frame, 1)
     if not ret:
-        print("not ret")
         continue
 
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
